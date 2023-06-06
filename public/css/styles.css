@@ -23,6 +23,11 @@ form {
 	text-align: left;
 }
 
+footer{
+	position: absolute;
+	left: 505px;
+	bottom: 10px;
+}
 /* Items container */
 
 .listItems {
