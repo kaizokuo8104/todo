@@ -1,0 +1,140 @@
+body {
+	background-color: black;
+	color: white;
+	text-align: center;
+	font-family: 'IBM Plex Mono', monospace;
+}
+
+h1 {
+	font-size: 1.9rem;
+	margin-top: 10px;
+}
+
+h2 {
+	margin: 0;
+	padding: 5px;
+	display: inline-block;
+	text-align: left;
+	font-family: 'Shadows Into Light', cursive;
+}
+
+form {
+	padding: 10px 0;
+	text-align: left;
+}
+
+/* Items container */
+
+.listItems {
+	text-align: left;
+	margin: 0;
+}
+
+/* Card */
+
+
+.card {
+	width: 400px;
+	height: auto;
+	margin: 2rem auto;
+	padding: 10px auto;
+	background-color: #f8fbfe;
+	border-radius: 8px;
+	z-index: 1;
+	color: black;
+}
+
+.tools {
+	display: flex;
+	align-items: center;
+	padding: 9px;
+}
+
+.circle {
+	padding: 0 4px;
+}
+
+.box {
+	display: inline-block;
+	align-items: center;
+	width: 10px;
+	height: 10px;
+	padding: 1px;
+	border-radius: 50%;
+}
+
+.red {
+	background-color: #ff605c;
+}
+
+.yellow {
+	background-color: #ffbd44;
+}
+
+.green {
+	background-color: #00ca4e;
+}
+
+/* Checkbox */
+
+.container {
+	--input-focus: #2d8cf0;
+	--input-out-of-focus: #ccc;
+	--bg-color: #fff;
+	--bg-color-alt: #666;
+	--main-color: #323232;
+	position: relative;
+	cursor: pointer;
+	margin: 0;
+	display: inline-block;
+	text-align: left;
+}
+
+.container input {
+	position: absolute;
+	opacity: 0;
+}
+
+.checkmark {
+	width: 30px;
+	height: 30px;
+	position: relative;
+	border: 2px solid var(--main-color);
+	border-radius: 5px;
+	box-shadow: 4px 4px var(--main-color);
+	background-color: var(--input-out-of-focus);
+	transition: all 0.3s;
+	display: inline-flex;
+}
+
+.container input:checked ~ .checkmark {
+	background-color: var(--input-focus);
+}
+
+.checkmark::after {
+	content: '';
+	width: 7px;
+	height: 15px;
+	position: absolute;
+	top: 2px;
+	left: 8px;
+	display: none;
+	border: solid var(--bg-color);
+	border-width: 0 2.5px 2.5px 0;
+	transform: rotate(45deg);
+}
+
+.container input:checked ~ .checkmark::after {
+	display: block;
+}
+
+.container input:checked ~ h2 {
+	text-decoration: line-through;
+}
+
+
+@media only screen and (max-width: 576px) {
+	.card {
+		width: 300px;
+	}
+}
